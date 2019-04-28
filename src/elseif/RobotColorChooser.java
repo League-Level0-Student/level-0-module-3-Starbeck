@@ -45,7 +45,7 @@ if(a.equals("red") || a.equals("Red")) {
 }else if(a.equals("gray") || a.equals("Gray")) {
 	c.setPenColor(125,125,125);
 }else{
-	//JOptionPane.showMessageDialog(null, "No color detected. \nSetting color to pencil gray.");
+	JOptionPane.showMessageDialog(null, "No known color detected. \nSetting to random color.");
 	//c.setPenColor(85,85,85);
 	c.setRandomPenColor();
 }
