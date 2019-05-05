@@ -5,12 +5,14 @@ import org.jointheleague.graphical.robot.Robot;
 public class ObedientRobot {
 	static Robot c = new Robot();
 	public static void main(String[] args) {
+		c.setWindowColor(125,125,125);
 		bgColor();
 		c.penDown();
 		c.setSpeed(10);
-		c.setPenWidth(7);
+		//c.setPenWidth(7);
 		chooseColor();
-		drawSquare();
+		shapeChoice();
+		runAgain();
 		c.hide();
 	}
 	static void drawSquare() {
@@ -87,9 +89,53 @@ public class ObedientRobot {
 	}else if(a.equals("default") || a.equals("Default")) {
 	}else{
 		JOptionPane.showMessageDialog(null, "No known color input. \nUsing Default Settings.");
-	}
-	}
-	static void shapeCoice() {
 		
+	}
+	}
+	static void shapeChoice() {
+		String a = JOptionPane.showInputDialog(null, "What shape do you want the robot to draw?\n(square, Triange, or Star)");
+		if(a.equals("square") || a.equals("Square")) {
+			drawSquare();
+		}else if(a.equals("triangle") || a.equals("Triangle") || a.equals("T")) {
+			drawTriangle();
+		}else if(a.equals("star") || a.equals("Star")) {
+			drawStar();
+		}
+	}
+	static void runAgain() {
+		String a = JOptionPane.showInputDialog(null, "Do you want to draw another shape? Input draw to draw another shape, bg to change background color, ink to change pen color, or exit to exit.");
+		if(a.equals("bg")) {
+			bgColor();
+			runAgain();
+		}else if(a.equals("draw")) {
+			c.setAngle(90);
+			c.move(75);
+			shapeChoice();
+			runAgain();
+		}else if(a.equals("ink")) {
+			chooseColor();
+			runAgain();
+		}else if(a.equals("exit")) {
+			System.exit(1);
+		}
+	}
+	static void drawTriangle() {
+		c.setAngle(150+180);
+		c.move(50);
+		c.turn(240);
+		c.move(50);
+		c.turn(240);
+		c.move(50);
+		c.hide();
+		c.turn(240);
+		c.move(50);
+		c.turn(360);
+	}
+	static void drawStar() {
+		c.setAngle(160);
+		for(int i=0; i<5; i++) {
+			c.move(50);
+			c.turn(144);
+		}
 	}
 }
