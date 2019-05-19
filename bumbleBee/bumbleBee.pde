@@ -6,8 +6,15 @@ Use Modulo to make the colors alternate
 
 for(int i=1;i<20;i++){
   int l=((i-1)*25);
+  if(i%2==0){
+    fill(255, 251, 28);
+
+  }else{
+    fill(0,0,0);
+  }
   ellipse(l, l, 50, 50);
 }
+drawBeeFace(19*25, 19*25);
 }
 
 void drawFlower(int x, int y) {
@@ -19,7 +26,7 @@ void drawFlower(int x, int y) {
            ellipse(0, -40, 50, 50);
           rotate(radians(72));
      }
-     fill(#fff9bb); // light yellow
+     fill(#fff9bb);
      ellipse(0, 0, 50, 50);
 } 
 void drawBeeFace(int BeeFaceX, int BeeFaceY) {
