@@ -21,9 +21,9 @@ public class BirthdayReminder {
 		//JOptionPane.showMessageDialog(null, r);
 		if(r.equals("mom")) {
 			JOptionPane.showMessageDialog(null, momsBirthday);
-		}if(r.equals("dad")){
+		}else if(r.equals("dad")) {
 			JOptionPane.showMessageDialog(null, dadsBirthday);
-		}if(r.equals("your birthday")){
+		}else if(r.equals("your birthday")) {
 			JOptionPane.showMessageDialog(null, myBirthday);
 		}else {
 			JOptionPane.showMessageDialog(null, "Sorry, i don't remember that person's birthday");

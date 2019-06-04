@@ -28,7 +28,9 @@ if(b<=10 && b>0) {
 	static void dance(int numberOfSpins) {
 		for (int i = 0; i < numberOfSpins; i++) {
 			robot.turn(360);
+			JOptionPane.showMessageDialog(null, i+1);
 		}
+		System.exit(1);
 	}
 }
 

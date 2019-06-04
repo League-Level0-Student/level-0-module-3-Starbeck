@@ -17,9 +17,10 @@ public class BananaQuiz
 			JOptionPane.showMessageDialog(null, "�");
 			System.exit(0);
 		}else {
-			JOptionPane.showMessageDialog(null, "The question was for a yes/no answer");
+			JOptionPane.showMessageDialog(null, "That was supposed to be a yes/no answer.");
 			System.exit(0);
 		}
+		//e question was for a yes/no answer
 		//1. ask the user if they like bananas
 		//2. if they say no, 
 			//tell them they are crazy 
@@ -30,7 +31,6 @@ public class BananaQuiz
 
 		//4. OPTIONAL: if they say something other than “yes�? or “no�?
 		//	show a pop up that says “You are bananas!�?
-	
 	}
 
 }
