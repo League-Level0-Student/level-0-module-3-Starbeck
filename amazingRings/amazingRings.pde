@@ -1,51 +1,29 @@
 int x1=150;
 int x2=650;
+int s1=1;
+int s2=-1;
 void setup(){
-  size(800,400); 
+  size(800,300); 
   background(#cdcdcd);
 }
 void draw(){
   noFill();
-  for(int n=15;n<=65;n++){
+  //for(int n=15;n<=65;n++){
   background(#cdcdcd);
   for(int i=25;i>0;i--){
       int h =(i*10);
-      int j=(n*10);
-      ellipse(j, 200, h, h);
+      //int j=(n*10);
+      ellipse(x1, 150, h, h);
     }
-  }
-  for(int g=65;g>=15;g--){
-    background(#cdcdcd);
+  //}
+  //for(int g=65;g>=15;g--){
+    //background(#cdcdcd);
     for(int i=25;i>0;i--){
       int h =(i*10);
-      int j=(g*10);
-      ellipse(j, 200, h, h);
-    }
-  }
-  for(int i=25;i>0;i--){
-    int h =(i*10);
-    ellipse(x1, 200, h, h);
-  }
-  for(int i=25;i>0;i--){
-    int h =(i*10);
-    ellipse(x2, 200, h, h);
-  }
-}
-//for(int n=15;n<=65;n++){
-  //background(#cdcdcd);
-  //for(int i=25;i>0;i--){
-      //int h =(i*10);
-      //int j=(n*10);
-      //ellipse(j, 200, h, h);
-      //
-    //}
-//}
-//for(int g=65;g>=15;g--){
-  //background(#cdcdcd);
-  //for(int i=25;i>0;i--){
-      //int h =(i*10);
       //int j=(g*10);
-      //ellipse(j, 200, h, h);
-      //
-    //}
-//}
+      ellipse(x2, 150, h, h);
+    }
+  //}
+  x1+=1;
+  x2--;
+}
